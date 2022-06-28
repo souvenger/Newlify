@@ -1,0 +1,10 @@
+[theme]
+# Font family (serif | sans serif | mono) for the page. Will not impact code areas.
+# Default: "Monospace"
+font = "monospace"
+
+
+
+backgroundColor="#b51606"
+secondaryBackgroundColor="#ea5d59"
+textColor="#f9f5f5"

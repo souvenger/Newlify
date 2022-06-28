@@ -12,9 +12,14 @@ from io import BytesIO
 
 @st.cache(allow_output_mutation=True)
 def load():
-    prototxt = "D:\\PROJECTS\\Newlyfy\\colorization_deploy_v2.prototxt"
-    caffe_model = "D:\\PROJECTS\\Newlyfy\\colorization_release_v2.caffemodel"
-    pts_npy = "D:\\PROJECTS\\Newlyfy\\pts_in_hull.npy"
+    # EXTERNAL_DEPENDENCIES = {
+    #     "caffe.caffemodel": {
+    #         "url": "https://drive.google.com/file/d/1lDjVO8sGtZQ-LUqw2yFCWJatCVrJyFNf/view?usp=sharing",
+    #         "size":  128946764}
+    # }
+    prototxt = "colorization_deploy_v2.prototxt"
+    caffe_model = "colorization_release_v2.caffemodel"
+    pts_npy = "pts_in_hull.npy"
 
     net = cv2.dnn.readNetFromCaffe(prototxt, caffe_model)
     pts = np.load(pts_npy)
@@ -87,18 +92,18 @@ def sample():
     with st.sidebar.container():
         new_title = '<p style="font-family:Monospace; color:White; font-size: 25px;">Sample Images</p>'
         st.markdown(new_title, unsafe_allow_html=True)
-        img1 = Image.open("D:\\PROJECTS\\Newlyfy\\test\\barn.png")
+        img1 = Image.open("test\\barn.png")
         img2 = Image.open(
-            "D:\PROJECTS\\Newlyfy\\test\\WhatsApp Image 2022-03-14 at 09.24.36.jpeg")
+            "test\\WhatsApp Image 2022-03-14 at 09.24.36.jpeg")
         img3 = Image.open(
-            "D:\PROJECTS\\Newlyfy\\test\\Charlie-Chaplin-City-Lights.webp")
+            "test\\Charlie-Chaplin-City-Lights.webp")
         img4 = Image.open(
-            "D:\PROJECTS\\Newlyfy\\test\\Pin by Chris Glad on Blackground....jpg")
-        img5 = Image.open("D:\\PROJECTS\\Newlyfy\\test\\find-models-11.webp")
+            "test\\Pin by Chris Glad on Blackground....jpg")
+        img5 = Image.open("test\\find-models-11.webp")
         img6 = Image.open(
-            "D:\\PROJECTS\\Newlyfy\\test\\taj-mahal-1652183243.jpg")
+            "test\\taj-mahal-1652183243.jpg")
         img7 = Image.open(
-            "D:\\PROJECTS\\Newlyfy\\test\\5138683118fd41214d6d28ecb067d93e.jpg")
+            "test\\5138683118fd41214d6d28ecb067d93e.jpg")
         st.image(img1, use_column_width=True)
         st.image(img2, use_column_width=True)
         st.image(img3, use_column_width=True)
@@ -111,10 +116,13 @@ def sample():
 def main():
 
     net = load()
-
+    #st.sidebar.title("Developer's Contact")
+    st.sidebar.markdown('[![Harsh-Dhamecha]'
+                        '(https://img.shields.io/badge/Author-Sourav%20Dey-brightgreen)]'
+                        '(https://github.com/souvenger)')
     Output_image = 400
     with st.sidebar.container():
-        image = Image.open("D:\\PROJECTS\\Newlyfy\\Newlify.png")
+        image = Image.open("Newlify.png")
         st.image(image, use_column_width=True)
 
     menu = ['Newlify', 'Purify', 'Blendify', 'Cartoonify']
