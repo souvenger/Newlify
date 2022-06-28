@@ -1,6 +1,4 @@
 [theme]
-# Font family (serif | sans serif | mono) for the page. Will not impact code areas.
-# Default: "Monospace"
 font = "monospace"
 
 
