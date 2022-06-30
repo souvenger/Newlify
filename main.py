@@ -19,7 +19,7 @@ def load():
     caffe_model = "colorization_release_v2.caffemodel"
     pts_npy = "pts_in_hull.npy"
 
-    net = cv2.dnn.readNetFromCaffe(prototxt, caffe_model)
+    net = cv2.dnn.readNet(prototxt, caffe_model)
     pts = np.load(pts_npy)
 
     layer1 = net.getLayerId("class8_ab")
