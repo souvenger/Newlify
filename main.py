@@ -3,7 +3,7 @@ import cv2
 from PIL import Image, ImageEnhance
 import streamlit as st
 from io import BytesIO
-
+# print(cv2.__version__)
 # https://medium.com/analytics-vidhya/meet-streamlit-sharing-build-a-simple-photo-editor-9d9e2e8872a
 # https://www.analyticsvidhya.com/blog/2022/06/cartoonify-image-using-opencv-and-python/
 
@@ -16,7 +16,7 @@ def load():
     #         "size":  128946764}
     # }
     prototxt = "colorization_deploy_v2.prototxt"
-    caffe_model = "colorization_release_v2.caffemodel"
+    caffe_model = "D:\\PROJECTS\\Newlify\\colorization_release_v2.caffemodel"
     pts_npy = "pts_in_hull.npy"
 
     net = cv2.dnn.readNetFromCaffe(prototxt, caffe_model)
