@@ -1,5 +1,5 @@
 numpy==1.23.0
-opencv-python-headless
+opencv-python==4.5.5-dev
 Pillow==9.1.1
 streamlit==1.10.0
 protobuf==3.20.0
