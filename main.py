@@ -16,7 +16,7 @@ def load():
     #         "size":  128946764}
     # }
     prototxt = "colorization_deploy_v2.prototxt"
-    caffe_model = "D:\\PROJECTS\\Newlify\\colorization_release_v2.caffemodel"
+    caffe_model = "colorization_release_v2.caffemodel"
     pts_npy = "pts_in_hull.npy"
 
     net = cv2.dnn.readNet(prototxt, caffe_model)
