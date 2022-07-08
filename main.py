@@ -15,8 +15,8 @@ def load():
     #         "url": "https://drive.google.com/file/d/1lDjVO8sGtZQ-LUqw2yFCWJatCVrJyFNf/view?usp=sharing",
     #         "size":  128946764}
     # }
-    prototxt = "D:\PROJECTS\Newlify\colorization_deploy_v2.prototxt"
-    caffe_model = "D:\PROJECTS\Newlify\colorization_release_v2.caffemodel"
+    prototxt = "D:\\PROJECTS\\Newlify\\colorization_deploy_v2.prototxt"
+    caffe_model = "D:\\PROJECTS\\Newlify\\colorization_release_v2.caffemodel"
     pts_npy = "pts_in_hull.npy"
 
     net = cv2.dnn.readNet(prototxt, caffe_model)
